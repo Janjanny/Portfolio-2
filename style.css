@@ -30,6 +30,9 @@
     line-height: 2rem;
     vertical-align: center;
     color: var(--font-color);
+    position: absolute;
+    background-color: var(--bg-color);
+    top: 0;
 }
 
 .nav-bar .logo {
@@ -42,7 +45,7 @@
 .nav-links li {
     float: left;
     list-style: none;
-    margin-left: 3em;
+    margin-left: 2em;
     position: relative;
 }
 
@@ -75,3 +78,64 @@
 }
 
 
+/*homepage styles*/
+.homepage {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+.homepage .text-content {
+    padding-top: 12em;
+    width: 44%;
+    line-height: 4em;
+}
+
+.text-content .hello {
+    font-size: 1.5em;
+}
+
+.text-content .name {
+    font-size: 5.5em;
+}
+
+.text-content .front-end {
+    font-size: 3.3em;
+    font-weight: 400;
+}
+
+.text-content .introduction {
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+.text-content button {
+    margin-top: 1em;
+}
+
+.text-content .about-btn {
+    font-size: 1.5em;
+    padding: .1em 1em;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--color1);
+    color: var(--font-color);
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+.text-content .services-btn {
+    font-size: 1.5em;
+    padding: .1em 1em;
+    border-radius: 40px;
+    border: 3px solid var(--color1);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--font-color);
+
+
+}
+
+/**/
