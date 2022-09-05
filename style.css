@@ -231,10 +231,7 @@
 
 }
 
-.text-content .services-btn {
 
-
-}
 
 /*img content styles*/
 
@@ -250,7 +247,7 @@
     width: 100%;
     z-index: 0;
     top: 40px;
-    transform: rotate(-100deg);
+    transform: rotate(5deg);
 }
 
 .img-content .saly {
@@ -281,7 +278,7 @@
     top: 380px;
     left: 300px;
 
-    animation: float-blob2 7s infinite ;
+    animation: float-blob2 5s infinite ;
 
 }
 
@@ -303,6 +300,7 @@
     0% {
         transform: translateY(-5%);
     }
+    
     50% {
         transform: translateY(5%);
     }
@@ -318,7 +316,10 @@
     50% {
         transform: translateY(-5%);
     }
+    
     100% {
         transform: translateY(5%);
     }
+
+
 }
