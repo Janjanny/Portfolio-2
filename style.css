@@ -19,6 +19,7 @@
 }
 
 
+
 /*navigation styles*/
 .nav-bar {
     display: flex;
@@ -26,7 +27,7 @@
     background-color: transparent;
     padding: 1em 2.5em;
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     line-height: 2rem;
     vertical-align: center;
     color: var(--font-color);
@@ -42,6 +43,9 @@
     font-size: 2em;
     height: 4rem;
 
+    position: relative;
+    top: -10px;
+    opacity: 0;
 }
 
 .nav-links li {
@@ -49,6 +53,9 @@
     list-style: none;
     margin-left: 2em;
     position: relative;
+    overflow: hidden;
+    top: -10px;
+    opacity: 0;
 }
 
 .nav-links li:not(:last-child) {
@@ -86,7 +93,7 @@
     color: var(--color2);
     width: 150px;
     height: 35px;
-    border-radius: 1em; 
+    border-radius: 20px; 
     box-shadow: var(--box-shadow);
     position: relative;
 
@@ -97,10 +104,7 @@
     position: absolute;
     background-color: var(--color2);
     width: 100%;
-    border-radius: 1em;
-    height: 35px;
-    top: 0;
-    left: 0;
+    height: 100%;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .5s;
@@ -108,6 +112,7 @@
 }
 
 .nav-links .cntct-btn:hover::before{
+    background-image: linear-gradient(to right,var(--color1), var(--color2));
     transform-origin: left;
     transform: scaleX(1);
 
@@ -142,6 +147,8 @@
     font-size: 1.2em;
     padding-left: .8em;
     padding-right: .8em;
+    position: relative;
+    
 }
 
 
@@ -150,6 +157,7 @@
 /*homepage styles*/
 .homepage {
     width: 95%;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -157,6 +165,12 @@
     background-color: var(--bg-color);
     padding-left: 2em;
     overflow: hidden;
+}
+
+.text-content .item {
+    position: relative;
+    left: -120px;
+    opacity: 0;
 }
 
 .homepage .text-content {
@@ -197,6 +211,9 @@
     cursor: pointer;
     background-color: transparent;
     position: relative;
+    background-color: var(--color1);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
 
 .text-content .about-btn span,
@@ -208,28 +225,27 @@
 
 .text-content .about-btn::before,
 .text-content .services-btn::before {
-    content: "";
+    content: '';
+    display: block;
     position: absolute;
-    width: 25%;
+    background-color: var(--color2);
+    width: 100%;
+    border-radius: 1em;
     height: 100%;
-    background-color: var(--color1);
     top: 0;
     left: 0;
-    border-radius: 40px;
-    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
 }
 
 .text-content .about-btn:hover::before,
 .text-content .services-btn:hover::before{
-    background-color: var(--color1);
-    width: 100%;
-}
-
-.text-content .about-btn:active::before {
     background-color: var(--color2);
-    width: 100%;
-
+    transform-origin: left;
+    transform: scaleX(1);
 }
+
 
 
 
@@ -240,6 +256,13 @@
     width: 55%;
     height: 95vh;
     display: flex;
+    padding-left: 100px;
+}
+
+.img-content .img{
+    position: relative;
+    margin-left: 30px;
+    opacity: 0;
 }
 
 .img-content .blob {
@@ -247,6 +270,7 @@
     width: 100%;
     z-index: 0;
     top: 40px;
+    left: 60px;
     transform: rotate(5deg);
 }
 
@@ -254,8 +278,8 @@
     position: absolute;
     z-index: 1;
     width: 80%;
-    left: 100px;
-    top: 50px;
+    left: 150px;
+    top: 70px;
     
     animation: float-saly 7s infinite;
 }
@@ -265,7 +289,7 @@
     z-index: 1;
     width: 35%;
     top: 160px;
-    left: 60px;
+    left: 100px;
 
     animation: float-blob1 7s infinite;
 
@@ -275,8 +299,8 @@
     position: absolute;
     z-index: 1;
     width: 50%;
-    top: 380px;
-    left: 300px;
+    top: 350px;
+    left: 320px;
 
     animation: float-blob2 5s infinite ;
 
