@@ -54,7 +54,6 @@ imgItems.each(function () {
 
 //nav bar responsive
 $(".icon").click(function() {
-    $(".icon").removeClass("fa-bars");
     $(this).toggleClass("fa-times");
     $(".nav-links").toggleClass("active");
 })
