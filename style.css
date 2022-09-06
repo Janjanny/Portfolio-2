@@ -16,6 +16,8 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+
+    scroll-behavior: smooth;
 }
 
 
@@ -27,8 +29,8 @@
     background-color: transparent;
     padding: 1em 2.5em;
     width: 100%;
-    height: 3.5rem;
-    line-height: 2rem;
+    height: 4.3rem;
+    line-height: 2.3rem;
     vertical-align: center;
     color: var(--font-color);
     position: absolute;
@@ -40,11 +42,11 @@
 
 .nav-bar .logo {
     display: flex;
-    font-size: 2em;
-    height: 4rem;
+    font-size: 2.5em;
+    height: 5rem;
 
     position: relative;
-    top: -10px;
+    top: 10px;
     opacity: 0;
 }
 
@@ -715,4 +717,77 @@
     .text-content .front-end {
         font-size: 2.2em;
     }
+}
+
+
+/*about me section styles*/
+
+.about-me{
+    width: 100%;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+
+}
+
+.about-me .img-div {
+    width: 45%;
+}
+
+.about-me .img-div .circle {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(var(--color1), var(--color2));
+    border-radius: 15%;
+    margin-left: auto;
+    margin-right: 70px;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 0 2px var(--color2), 0 0 10px var(--color2), 0 0 20px var(--color1);
+    top: 150px;
+
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    100% {
+        box-shadow: 0 0 10px var(--color2), 0 0 20px var(--color2), 0 0 30px var(--color2), 0 0 40px var(--color2);
+    }
+}
+
+.img-div .saly-front {
+    position: absolute;
+    top: 0;
+    left: -190px;
+    width: 200%;
+}
+
+
+.about-me .about-me-texts {
+    width: 48%;
+    height: fit-content;
+    margin-top: 9em;
+    margin-bottom: auto;
+    line-height: 3em;
+    text-align: justify;
+}
+
+.about-me-texts .hi-there {
+    font-size: 2em;
+}
+
+.about-me-texts .about-me-name {
+    font-size: 3em;
+}
+
+.about-me-texts .about-me-intro {
+    font-size: 3em;
+}
+
+.about-me-texts .about-me-details {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-top: 1em;
 }
