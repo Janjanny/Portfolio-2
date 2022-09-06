@@ -45,15 +45,19 @@ textItems.each(function() {
 
 //img content animations
 imgItems.each(function () {
-    $(this).delay(j).animate({
+    $(this).delay(1000).animate({
         marginLeft: "0px",
         opacity: 1
     })
-    j+=itemDelay;
+    j+=itemDelay2;
 })
 
 //nav bar responsive
+$(".icon").delay(700).animate({
+    opacity: 1
+});
 $(".icon").click(function() {
-    $(this).toggleClass("fa-times");
+    $(this).toggleClass("uil-times");
     $(".nav-links").toggleClass("active");
+    $(".nav-button").toggleClass("cntct-btn");
 })
