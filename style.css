@@ -48,6 +48,10 @@
     opacity: 0;
 }
 
+.icon {
+    display: none;
+}
+
 .nav-links li {
     float: left;
     list-style: none;
@@ -96,6 +100,7 @@
     border-radius: 20px; 
     box-shadow: var(--box-shadow);
     position: relative;
+    user-select: none;
 
 }
 .nav-links .cntct-btn::before {
@@ -199,6 +204,7 @@
 
 .text-content button {
     margin-top: 1em;
+    user-select: none;
 }
 
 .text-content .about-btn,
@@ -221,6 +227,7 @@
     color: var(--font-color);
     position: relative;
     z-index: 2;
+    user-select: none;
 }
 
 .text-content .about-btn::before,
@@ -345,5 +352,222 @@
         transform: translateY(5%);
     }
 
+}
 
+/*Media queries for homepage section*/
+@media (max-width: 1410px) {
+    .text-content .front-end {
+        font-size: 3em;
+    }
+}
+
+
+@media (max-width: 1285px) {
+    .text-content .front-end {
+        font-size: 2.5em;
+    }
+
+    .text-content .name {
+        font-size: 4.8em;
+    }
+
+    .text-content .introduction {
+        font-size: 1em;
+    }
+
+    .img-content .object2 {
+        top: 350px;
+        left: 280px;
+    }
+
+    .img-content .blob {
+        top: 100px;
+        width: 110%;
+        left: 50px;
+    }
+
+    .img-content .saly {
+        top: 100px;
+        width: 90%;
+        left: 100px;
+    }
+    
+}
+
+@media (max-width: 1078px) {
+    .text-content .front-end {
+        font-size: 2.2em;
+    }
+    .text-content .name {
+        font-size: 4.5em;
+    }
+
+    .homepage .text-content {
+        line-height: 3.5em;
+    }
+
+    .img-content .saly {
+        width: 90%;
+        left: 100px;
+    }
+
+
+}
+
+@media (max-width: 1012px) {
+    .text-content .introduction {
+        font-size: .9em;
+    }
+
+    .img-content .object2 {
+        top: 280px;
+    }
+
+    .img-content .saly {
+        width: 90%;
+        left: 100px;
+    }
+}
+
+@media (max-width: 996px) {
+    .text-content .about-btn {
+        margin-bottom: 10px;
+        margin-left: -10px;
+    }
+    .text-content .services-btn {
+        margin-top: -10px;
+        margin-left: -10px;
+
+    }
+}
+
+@media (max-width: 951px) {
+    .homepage .text-content {
+        line-height: 3em;
+    }
+    .text-content .hello {
+        font-size: 1em;
+    }
+
+    .text-content .name {
+        font-size: 3.5em;
+    }
+    .text-content .front-end {
+        font-size: 1.8em;
+    }
+
+    .text-content .introduction {
+        font-size: .8em;
+    }
+
+    .text-content button {
+        transform: scale(.9);
+    }
+
+    .img-content .blob {
+        left: 10px;
+    }
+
+    .img-content .saly {
+        left: 90px;
+    }
+
+    .img-content .object1 {
+        left: 70px;
+    }
+}
+
+@media (max-width: 832px) {
+    .img-content .object2 {
+        top: 300px;
+        left: 230px;
+    }
+}
+
+@media (max-width: 784px) {
+    .nav-links li {
+        margin-left: .5em;
+        font-size: .9em;
+    }
+
+    .nav-links .cntct-btn {
+        transform: scale(.9);
+    }
+    .homepage .text-content {
+        line-height: 2.5em;
+    }
+    .text-content .hello {
+        font-size: .9em;
+    }
+
+    .text-content .name {
+        font-size: 3.1em;
+    }
+    .text-content .front-end {
+        font-size: 1.5em;
+    }
+
+    .text-content .introduction {
+        font-size: .7em;
+    }
+
+    .text-content button {
+        transform: scale(.8);
+    }
+
+    .img-content .blob {
+        left: 10px;
+    }
+
+    .img-content .saly {
+        left: 90px;
+        top: 120px;
+    }
+
+    .img-content .object1 {
+        left: 70px;
+    }
+
+
+    .img-content .object2 {
+        left: 200px;
+    }
+
+    .text-content .about-btn {
+        top: -10px;
+        margin-left: -15px;
+    }
+    .text-content .services-btn {
+        top: -10px;
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        max-width: 300px;
+        background-color: var(--color1);
+        top: 70px;
+        right: 0;
+        display: block;
+        box-sizing: border-box;
+        padding: 20px 80px;
+        display: none;
+    }
+
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
 }

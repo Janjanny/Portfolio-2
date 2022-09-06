@@ -51,3 +51,10 @@ imgItems.each(function () {
     })
     j+=itemDelay;
 })
+
+//nav bar responsive
+$(".icon").click(function() {
+    $(".icon").removeClass("fa-bars");
+    $(this).toggleClass("fa-times");
+    $(".nav-links").toggleClass("active");
+})
