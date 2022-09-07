@@ -114,6 +114,7 @@
     height: 100%;
     transform: scaleX(0);
     transform-origin: right;
+    border-radius: 20px; 
     transition: transform .5s;
 
 }
@@ -266,6 +267,7 @@
     height: 95vh;
     display: flex;
     padding-left: 100px;
+    overflow: hidden;
 }
 
 .img-content .img{
@@ -486,7 +488,7 @@
     }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 827px) {
     .nav-links li {
         margin-left: .5em;
         font-size: .9em;
@@ -545,7 +547,7 @@
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 703px) {
     .icon {
         display: block;
         font-size: 1.8em;
@@ -619,9 +621,9 @@
         width: 100%;
         height: fit-content;
         justify-content: center;
-        align-items: center;
         overflow: hidden;
-        padding: 0;
+        padding-bottom: 8rem;
+        padding-left: 0;
     }
 
     .homepage .img-content {
@@ -665,6 +667,8 @@
         padding: 0;
         text-align: center;    
         line-height: 3em;
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
@@ -726,24 +730,31 @@
     width: 100%;
     background-color: var(--font-color);
     color: var(--bg-color);
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 8rem;
     display: flex;
-
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 
 .about-me .img-div {
-    width: 45%;
+    width: 40%;
 }
 
 .about-me .img-div .circle {
-    width: 400px;
-    height: 400px;
+    width: 27rem;
+    height: 27rem;
     background-image: linear-gradient(var(--color1), var(--color2));
     border-radius: 15%;
     margin-left: auto;
-    margin-right: 70px;
+    margin-right: auto;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+
 
     box-shadow: 0 0 2px var(--color2), 0 0 10px var(--color2), 0 0 20px var(--color1);
     top: 150px;
@@ -762,20 +773,32 @@
     top: 0;
     left: -190px;
     width: 200%;
+    z-index: 1;
+}
+
+.about-me .flag {
+    position: absolute;
+    width: 65rem;
+    z-index: 0;
+    right: -220px;
+    top: -100px;
 }
 
 
 .about-me .about-me-texts {
-    width: 48%;
+    width: 50%;
+    padding-right: 5em;
     height: fit-content;
     margin-top: 9em;
     margin-bottom: auto;
-    line-height: 3em;
-    text-align: justify;
+    line-height: 3.2em;
+    z-index: 1;
+
 }
 
 .about-me-texts .hi-there {
     font-size: 2em;
+    font-weight: 300;
 }
 
 .about-me-texts .about-me-name {
@@ -790,4 +813,246 @@
     font-size: 1.2em;
     line-height: 1.3em;
     margin-top: 1em;
+}
+
+.about-me-texts .say-hello {
+    box-sizing: content-box;
+    margin-top: 1em;
+    font-size: 1.5em;
+    width: 6em;
+    height: 2em;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color1);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.about-me-texts .say-hello::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--color2);
+    border-radius: 30px;
+    transform: scaleX(0);
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+
+    transform-origin: right;
+    transition: transform .5s;
+
+
+
+}
+
+.about-me-texts .say-hello:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.say-hello span {
+    position: relative;
+    z-index: 1;
+    color: var(--font-color);
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+
+/*media queries for about-me section*/
+@media (max-width: 1270px) {
+    .about-me .about-me-texts {
+        padding-left: 3rem;
+        padding-right: 0;
+    }
+
+    .about-me-texts .hi-there{
+        font-size: 1.8em;
+    }
+
+    .about-me-texts .about-me-name {
+        font-size: 2.5em;
+    }
+
+    .about-me-texts .about-me-intro {
+        font-size: 2.5em;
+    }
+
+}
+
+@media (max-width: 1025px) {
+    .about-me .img-div .circle {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .about-me .about-me-texts {
+        line-height: 2.2em;
+    }
+
+    .about-me-texts .hi-there {
+        font-size: 1.5em;
+    }
+
+    .about-me-texts .about-me-name{
+        font-size: 2em;
+    }
+
+    .about-me-texts .about-me-intro{
+        font-size: 2em;
+    }
+
+    .about-me-texts .about-me-details{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-me .img-div .circle {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .circle .saly-front {
+        left: -130px;
+        
+    }
+
+    .about-me .flag {
+        width: 60rem;
+        right: -250px;
+        top: -100px;
+    }
+
+    .about-me .about-me-texts {
+        line-height: 1.9em;
+        padding-left: 60px;
+    }
+
+    .about-me-texts .hi-there {
+        font-size: 1.3em;
+    }
+
+    .about-me-texts .about-me-name{
+        font-size: 1.8em;
+    }
+
+    .about-me-texts .about-me-intro{
+        font-size: 1.8em;
+    }
+
+    .about-me-texts .about-me-details{
+        font-size: 1em;
+    }
+
+    .about-me-texts .say-hello {
+        font-size: 1.2em;
+        width: 6em;
+        height: 2em;
+        
+    
+    }
+}
+
+@media (max-width: 703px) {
+    .about-me {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .about-me .img-div {
+        width: 100%;
+        overflow: hidden;
+        padding: 5rem 0 2rem 0;
+    }
+
+    .about-me .img-div .circle {
+        top: 0;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .about-me .flag {
+        width: 40rem;
+        right: -150px;
+        top: -50px;
+    }
+
+    .circle .saly-front {
+        left: -110px;
+    }
+
+    .about-me .about-me-texts {
+        width: 100%;
+        text-align: center;
+        padding: 40px 50px 40px;
+        margin: 0;
+        line-height: 3em;
+    }
+
+    .about-me-texts .hi-there {
+        font-size: 1.8em;
+    }
+
+    .about-me-texts .about-me-name{
+        font-size: 2.8em;
+    }
+
+    .about-me-texts .about-me-intro{
+        font-size: 2.8em;
+    }
+
+    .about-me-texts .about-me-details{
+        font-size: 1.3em;
+    }
+
+    .about-me-texts .say-hello {
+        font-size: 2em;
+        width: 6em;
+        height: 2em;
+        
+    }
+}
+
+@media (max-width: 440px) {
+    .about-me .about-me-texts {
+        width: 100%;
+        text-align: center;
+        padding: 40px 40px 40px;
+        margin: 0;
+        line-height: 2.5em;
+    }
+
+    .about-me-texts .hi-there {
+        font-size: 1.4em;
+    }
+
+    .about-me-texts .about-me-name{
+        font-size: 1.9em;
+    }
+
+    .about-me-texts .about-me-intro{
+        font-size: 1.9em;
+    }
+
+    .about-me-texts .about-me-details{
+        font-size: 1.2em;
+    }
+
+    .about-me-texts .say-hello {
+        font-size: 1.5em;
+        width: 6em;
+        height: 2em;
+        
+    }
 }

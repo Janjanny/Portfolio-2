@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/2ac6ace852.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav class="nav-bar">
@@ -27,12 +28,12 @@
     </nav>
 
     <section id="homepage" class="homepage"> 
-        <div class="text-content">
+        <div class="text-content" >
             <p class="hello item">HELLO, I AM</p>
             <h1 class="name item">Chris Jan</h1>
             <h2 class="front-end item">A Front End Developer</h2>
             <p class="introduction item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum esse assumenda magnam ipsum, ipsa quasi quo placeat autem, voluptate laboriosam numquam fugiat eum quae sit.</p>
-            <a href=""><button class="about-btn item"><span>About Me</span></button></a>
+            <a href="#about-me"><button class="about-btn item"><span>About Me</span></button></a>
             <a href=""><button class="services-btn item"><span>My Services</span></button></a>
         </div>
         <div class="img-content">
@@ -45,17 +46,20 @@
 
     <!---About me section-->
     <section id="about-me" class="about-me">
-        <div class="img-div">
+        <div class="img-div"  data-aos="fade-left" data-aos-delay="50" data-aos-duration="1500">
             <div class="circle">
                 <img src="Saly-41.png" class="saly-front" alt="">
+                <img src="filipina.png" alt="" class="flag">
             </div>
         </div>
-        <div class="about-me-texts">
+        <div class="about-me-texts" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500">
             <p class="hi-there">Hi There</p>
             <h1 class="about-me-name">I am Chris Jan Beboso.</h1>
             <h1 class="about-me-intro">A front end web developer and designer based in the Philippines.</h1>
             <p class="about-me-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, minima. Voluptatem incidunt quisquam et eveniet doloremque rem recusandae quos nam.</p>
+            <button class="say-hello"><span>Say Hello</span></button>
         </div>
+        
     </section>
 
 
@@ -63,5 +67,10 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
