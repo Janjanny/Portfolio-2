@@ -1093,7 +1093,7 @@
     border-radius: 30px;
     padding: 3em 1.5em 1em;
     height: 25rem;
-    cursor: pointer;
+    cursor: default;
     transition: all .5s ease;
 
 }
@@ -1123,4 +1123,58 @@
     .skills-page .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+
+footer {
+    background-color: rgb(32, 32, 32);
+    color: var(--color2);
+    padding: 3em 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .icon-links {
+    width: 50%;
+}
+
+
+.icon-links h1 {
+    font-size: 3em;
+}
+
+.icon-links p {
+    font-size: 1.1em;
+    width: 85%;
+    margin-bottom: 1.5em;
+}
+
+.icon-links button {
+    font-size: 2em;
+    margin-right: .5em;
+    width: 60px;
+    height: 60px;
+    color: var(--color2);
+    background-color: transparent;
+    border: 2px solid var(--color2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s;
+}
+.icon-links button:hover {
+    background-color: var(--color2);
+    color:rgb(32, 32, 32) ;
+    transform: scale(1.1);
+}
+
+footer .form-div {
+    width: 390px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-div input {
+    width: 300px;
+    font-size: 1.2em;
 }
