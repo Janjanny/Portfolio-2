@@ -1127,7 +1127,7 @@
 
 
 footer {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(24, 24, 24);
     color: var(--color2);
     padding: 3em 3em;
     display: flex;
@@ -1163,18 +1163,81 @@ footer .icon-links {
 }
 .icon-links button:hover {
     background-color: var(--color2);
-    color:rgb(32, 32, 32) ;
+    color:var(--font-color) ;
     transform: scale(1.1);
+    box-shadow: 0 0 5px var(--color2),
+    0 0 25px var(--color2),
+    0 0 50px var(--color2);
 }
 
 footer .form-div {
     width: 390px;
     display: block;
-    text-align: center;
     margin: 0 auto;
+    padding: 1em;
 }
 
-.form-div input {
-    width: 300px;
+.input-box {
+    position: relative;
+    margin-top: 2.5em;
+}
+
+.form-div .input-box input {
+    width: 100%;
     font-size: 1.2em;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 2px solid var(--color2);
+    color: var(--color2);
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+
+
+.form-div .input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    pointer-events: none;
+    font-size: 1em;
+    opacity: .7;
+
+    transition: all .5s;
+}
+
+.form-div .input-box input:focus{
+    outline: none;
+    border: 4px solid var(--color2);
+}
+
+.form-div .input-box input:focus ~ label,
+.form-div .input-box input:valid ~ label{
+    top: -40px;
+    font-size: .8em;
+    opacity: 1;
+
+}
+
+
+.form-div .submit-btn {
+    margin-top: 1.3em;
+    font-size: 1.2em;
+    padding: .3em.8em;
+    background-color: transparent;
+    border: 2px solid var(--color2);
+    color: var(--color2);
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: all .5s;
+}
+
+.form-div .submit-btn:hover {
+    background-color: var(--color2);
+    color: var(--font-color);
+    box-shadow: 0 0 5px var(--color2),
+                0 0 25px var(--color2),
+                0 0 50px var(--color2);
 }

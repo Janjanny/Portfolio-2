@@ -23,7 +23,7 @@
             <li><a href="#homepage">Home</a></li>
             <li><a href="#about-me">About</a></li>
             <li><a href="#skills-page">Skills</a></li>
-            <li class="cntct-btn nav-button"><a href="#" ><span>Contact Me</span></a></li>
+            <li class="cntct-btn nav-button"><a href="#footer" ><span>Contact Me</span></a></li>
         </ul>
     </nav>
 
@@ -89,22 +89,29 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="icon-links" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">
             <h1>Let's Get in Touch!</h1>
             <p>You can contact me through my social media links for business discussions. You can also message me directly thru email. Have a Good Day!</p>
-            <a href="#"><button><i class="uil uil-facebook-f"></i></button></a>
-            <button><i class="uil uil-google"></i></button>
-            <button><i class="uil uil-github-alt"></i></button>
+            <a href="https://www.facebook.com/chrisjanbeboso" target="_blank"><button><i class="uil uil-facebook-f"></i></button></a>
+
+            <a href=""><button><i class="uil uil-google"></i></button></a>
+
+            <a href="https://github.com/Janjanny" target="_blank"><button><i class="uil uil-github-alt"></i></button></a>
+            
             <button><i class="uil uil-linkedin-alt"></i></button>
         </div>
-        <div class="form-div">
+        <div class="form-div" class="icon-links" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">
             <form action="">
-                <label for="email">Email</label>
-                <input type="email" name="" id="email">
-                <label for="message">Message</label>
-                <input type="text" id="message">
-                <button type="submit" classs="submit-btn">Submit</button>
+                <div class="input-box">
+                    <input type="text" name="" id="email" required="" autocomplete="off">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="message" required="" autocomplete="off">
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
     </footer>
