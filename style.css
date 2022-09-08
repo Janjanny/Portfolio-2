@@ -1125,6 +1125,7 @@
     }
 }
 
+/*footer styles*/
 
 footer {
     background-color: rgb(24, 24, 24);
@@ -1141,6 +1142,8 @@ footer .icon-links {
 
 .icon-links h1 {
     font-size: 3em;
+    line-height: 1em;
+    margin-bottom: .3em;
 }
 
 .icon-links p {
@@ -1169,6 +1172,9 @@ footer .icon-links {
     0 0 25px var(--color2),
     0 0 50px var(--color2);
 }
+
+
+
 
 footer .form-div {
     width: 390px;
@@ -1240,4 +1246,22 @@ footer .form-div {
     box-shadow: 0 0 5px var(--color2),
                 0 0 25px var(--color2),
                 0 0 50px var(--color2);
+}
+
+
+@media (max-width: 779px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .icon-links {
+        width: 100%;
+        text-align: center;
+    }
+    .icon-links p {
+        margin: 0 auto;
+    }
+
+    .icon-links button {
+        margin-top: 1em;
+    }
 }
